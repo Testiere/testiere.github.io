@@ -1,0 +1,26 @@
+*{margin:0; padding:0;}
+body{display: flex;}
+.side{background-color: aquamarine; 
+    width:30%;
+    height: 100vh;
+    padding-top: 20px;
+
+    
+}
+.view{
+    
+    background-color: bisque;
+    width:70%;
+    height: 80;
+    padding:10%;
+}
+#select{
+    background-color: bisque;
+}
+button{width:100%;
+    background-color: aquamarine;
+    border:none;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+button:hover{background-color: white;}
