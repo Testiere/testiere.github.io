@@ -8,6 +8,105 @@
     <title>Testiere | Chinese</title>
 </head>
 <body>
+    <script>
+        function congrats(){
+            alert("congrats!!")
+            window.open("https://testiere.github.io/courses/language/chinese/level/5/")
+        }
+        function caller(round){
+            if(round =="gōngfu -Kung Fu"){
+                quizstart("fēicháng - extremely", "非常")
+            }else{
+                if(round =="fēicháng - extremely"){
+                    quizstart("tèbié - especially", "特别")
+                }else{
+                    if (round =="tèbié - especially"){
+                        quizstart("I like to help others.", "我喜欢帮助别人。")
+                    }else{
+                        if(round =="I like to help others."){
+                            quizstart("duì ...gǎn xīng qù - be interested in", "对。。。感兴趣")
+                        }else{
+                            if(round =="duì ...gǎn xīng qù - be interested in"){
+                                quizstart("fēi - to fly", "飞")
+                            }else{
+                                if(round=="fēi - to fly"){
+                                    quizstart("dāng rán - of course", "当然")
+
+                                }else{
+                                    if(round=="dāng rán - of course"){
+                                        quizstart("lì hai - really, awesome, severe", "厉害")
+                                    }else{
+                                        if(round =="lì hai - really, awesome, severe"){
+                                            quizstart("hé --- yíyàng - same as..", "和。。。一样")
+                                        }else{
+                                            if(round=="hé --- yíyàng - same as.. "){
+                                                quizstart("bāng zhù - aid, to help, assist","帮助")
+                                            }else{
+                                                if(round=="bāng zhù - aid, to help, assist"){
+                                                    quizstart("bié rén - other people", "别人")
+                                                }else{
+                                                    if(round=="bié rén - other people"){
+                                                        quizstart("abao - Po", "阿宝")
+                                                    }else{
+                                                        if(round=="abao - Po"){
+                                                            quizstart("I am extremely interested in kongfu.", "我对功夫特别感兴趣。")
+                                                        }else{
+                                                            if(round=="I am extremely interested in kongfu."){
+                                                                quizstart("I am extremely interested in studying Chinese.", "我对学习汉语特别感兴趣")
+                                                            }else{
+                                                                if(round =="I am extremely interested in studying Chinese."){
+                                                                    quizstart("I like chicken as same as my mom", "我和妈妈一样都喜欢吃鸡肉。")
+                                                                }else{
+                                                                    if(round=="I like chicken as same as my mom"){
+                                                                        congrats()
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        function quizstart(questionText, Answertext){
+            const element = document.getElementById("quiz");
+            const question = document.getElementById("question");
+            question.innerText = questionText;
+            var answer = document.createElement('input');
+            
+            document.getElementById('question').appendChild(answer);
+            
+            var check = document.createElement('button');
+            check.innerText = "Check"
+            document.getElementById('question').appendChild(check);
+            check.addEventListener('click', ()=>{
+                const checkin = answer.value;
+                if (checkin ==Answertext){
+                    alert("Correct")
+                    caller(questionText)
+
+                }else{
+                    alert("False")
+                }
+            })
+            
+
+            
+        }
+        
+        function start(){
+            document.getElementById("start").parentNode.removeChild(document.getElementById("start"));
+            quizstart("gōngfu -Kung Fu", "功夫")
+        }
+    </script>
     <div class="side">
         
         <a href="../1/"><button id="select">Lesson 1</button></a>
@@ -25,7 +124,11 @@
         <a href="../13/"><button>Lesson 13</button></a>
     </div>
     <div class="view">
-        <h1>Nothing to view</h1>
+        <div id="quiz">
+            <h1 id="question"></h1>
+            
+        </div>
+        <button onclick="start()" id="start">Start!</button>
     </div>
 </body>
 </html>
