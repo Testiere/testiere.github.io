@@ -8,7 +8,7 @@ nav{ background-color: aquamarine;
     height: 50px;
     font-size: 25px;
     margin-bottom: 100px;
-    text-align: center;
+    justify-content: space-between;
 
 }
 .course{
