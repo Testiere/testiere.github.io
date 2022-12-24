@@ -26,3 +26,8 @@ nav{ background-color: aquamarine;
 }
 a{color:black; text-decoration: none;}
 nav a{margin-left: 25%;}
+::-webkit-scrollbar{width: 5px; margin:1px;}
+::-webkit-scrollbar-track{background-color: #ddd;}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(95, 95, 113);
+}

@@ -24,3 +24,8 @@ button{width:100%;
     margin-bottom: 20px;
 }
 button:hover{background-color: white;}
+::-webkit-scrollbar{width: 5px; margin:1px;}
+::-webkit-scrollbar-track{background-color: #ddd;}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(95, 95, 113);
+}
